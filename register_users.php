@@ -58,6 +58,21 @@
         input[type="submit"]:hover {
             background-color: #45a049;
         }
+
+        input[type="submit"],
+        .back-button {
+            width: 100%;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -73,10 +88,13 @@
         <label for="lastname">Last Name:</label><br>
         <input type="text" id="lastname" name="lastname" required><br><br>
 
+        <label for="address">Address:</label><br>
+        <input type="text" id="address" name="address" required><br><br>
+
         <label for="password">Password:</label><br>
         <input type="password" id="password" name="password" required><br><br>
-
         <input type="submit" value="Register">
+
     </form>
 </body>
 
