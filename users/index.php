@@ -15,7 +15,6 @@ $username = $_SESSION['username'];
 // Now you can use $user_id and $username to personalize the page for the logged-in user
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 

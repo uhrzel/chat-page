@@ -1,9 +1,10 @@
 <?php
+session_start();
 require('conn.php'); // Include your database connection script
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve user ID from session or wherever it's stored
-    $user_id = 1; // Assuming the user ID is 1
+    $user_id = $_SESSION['user_id'];
+    $username = $_SESSION['username'];
 
     // Sanitize and validate input data
     $username = mysqli_real_escape_string($con, $_POST['username']);

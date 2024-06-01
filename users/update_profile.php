@@ -1,10 +1,11 @@
 <?php
+session_start();
 require('conn.php'); // Include your database connection script
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve user ID from session or wherever it's stored
-    $user_id = 1; // Assuming the user ID is 1
 
+    $user_id = $_SESSION['user_id'];
+    $username = $_SESSION['username'];
     // Check if file was uploaded without errors
     if (isset($_FILES["profile_picture"]) && $_FILES["profile_picture"]["error"] == 0) {
         $file_name = $_FILES["profile_picture"]["name"];
